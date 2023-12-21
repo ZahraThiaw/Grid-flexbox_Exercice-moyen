@@ -1,0 +1,334 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#site{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+                "nav"
+                "section1"
+                "section2"
+                "section3"
+                "section4"
+                "section5"
+                "footer";
+}
+nav{
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+}
+.burger{
+    display: none;
+}
+#navG{
+    display: flex;
+    align-items: center  ;
+}
+#navG img{
+    height: 20px;
+    padding-right: 9px;
+}
+#navG ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+#navG li{
+    list-style: none;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+}
+#navG li:hover, #navG a:hover{
+    background-color: #d8d8d8;
+    color: #3dc1a7;
+    transition: 0.4s;
+}
+#navG a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+#navG input[type="text"] { 
+    width: 90px;
+}
+#navD{
+    display: flex;
+    align-items: center;
+}
+#navD ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+#navD li{
+    list-style: none;
+    padding-left: 9px;
+    padding-right: 9px;
+    border-right: 1px solid #333;
+}
+#navD li:last-child{
+    border-right: none;
+}
+#navD a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+#section1{
+    background-color: #f2f2f2;
+    grid-area: section1;
+}
+#section1 .box, #section2 .box{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#section1 .box a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 13px;
+}
+#section1 .box a:hover{
+    text-decoration: underline;
+
+}
+#section1 h1{
+    text-align: center;
+}
+#section1 h1 span{
+    font-weight: lighter;
+    color: #aaa;
+}
+#section1 .boite{
+    display: flex;
+    justify-content: space-between;
+}
+#section1 .boiteTexte{
+    width: 60%;
+}
+#section1 .boiteTexte p{
+    color: #333;
+    text-align: justify;
+}
+#section1 .boitePhoto img{
+    border: 2px solid #f2f2f2;
+}
+#section1 .boitePhoto img:hover{
+    border: 2px solid red;
+}
+#section2{
+    background-color: #fff;
+    grid-area: section2;
+}
+#section2 h2{
+    font-size: 16px;
+}
+#section2 #formations{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#section2 .formation{
+    width: 300px;
+    border: 1px solid #ddd;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+#section2 .formation:hover{
+    box-shadow:  5px 5px 5px #ccc;
+}
+#section2 .formation img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#section2 .formationPadding{
+    padding: 6px;
+}
+#section2 .lienNoir{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#section2 .lienNoir:hover{
+    text-decoration: underline;
+}
+#section2 .lienGris{
+    color: grey;
+    font-size: 15px;
+    text-decoration: none;
+}
+#section2 .lienGris:hover{
+    text-decoration: underline;
+}
+#section2 .formationDetail{
+    display: flex;
+    justify-content: space-between;
+}
+#section2 .vert{
+    color: #3dc1a7;
+    font-size: 18px;
+    font-weight: bold;
+}
+#section2 button{
+    background-color: #3dc1a7;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    padding: 5px;
+    padding-right: 30px;
+}
+#section3{
+    background-color: #f2f2f2;
+    grid-area: section3;
+}
+#section3 h2, #section4 h2{
+    margin-bottom: 16px;
+}
+#section3 h2, #section3 p, #section4 h2, #section4 p, #section5 h2{
+    text-align: center;
+}
+#section4{
+    background-color: #fff;
+    grid-area: section4;
+}
+#section5{
+    background-color: #f2f2f2;
+    grid-area: section5;
+}
+#section5 .section5Detail{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#section5 .icone{
+    text-align: center;
+}
+#section5 a{
+    color: red;
+    text-decoration: none;
+}
+#section5 a:hover{
+    text-decoration: underline;
+}
+#section5 .gras{
+    font-weight: bold;
+}
+footer{
+    background-color: #314456;
+    border-top: 3px solid #3dc1a7;
+    grid-area: footer;
+}
+footer .paragraphe{
+    width: 75%;
+    margin: auto;
+}
+footer .paragraphe p{
+    text-align: center;
+    color: #fff;
+}
+footer .footerDetail{
+    display: flex;
+    justify-content: space-around;
+}
+footer .textefooterD p{
+    color: #fff;
+}
+footer .footerD{
+    display: flex;
+    justify-content: space-around;
+}
+footer h3{
+    color: #3dc1a7;
+    font-size: 14px;
+}
+footer .iconefooterD i{
+    font-size: 25px;
+    margin-right: 10px;
+}
+footer ul{
+    list-style: none;
+}
+footer li{
+    text-decoration: none;
+    color: #fff;
+}
+.active{
+    display: block;
+}
+
+
+@media screen and (max-width: 860px) {
+    nav{
+        justify-content: center;
+        height: 40px;
+    }
+    .burger{
+        display: block;
+        color: #333;
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        cursor: pointer;
+    }
+    aside{
+        display: none;
+        z-index: 100;
+        position: absolute;
+        top: 40px;
+        width: 100%;
+    }
+    #navD a{
+        font-size: 12px;
+    }
+    #navG{
+        background-color: #475a6d;
+        flex-direction: column;
+        width: 100%;
+    }
+    #navG img{
+        display: none;
+    }
+    #navG ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    #section1 h1 span{
+        font-size: 12px;
+    }
+    #section1 .boite{
+       flex-direction: column;
+       align-items: center;
+    }
+    #section1 .boiteTexte p:nth-child(1){
+        font-weight: bold;
+        color: #3dc1a7;
+    }
+    #section3 h2, #section4 h2 #section5 h2{
+        font-size: 15px;
+    }
+    #section5 .section5Detail{
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    footer .footerDetail{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footerD{
+        flex-direction: column;
+    }
+}
